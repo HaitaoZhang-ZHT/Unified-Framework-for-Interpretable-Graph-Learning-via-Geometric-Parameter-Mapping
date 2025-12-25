@@ -1,0 +1,50 @@
+===== 嵌入数据信息 =====
+max_num_atoms: 55
+original_embed_dim: 256
+fused_embed_dim: 260
+num_samples: 1128
+use_mol_emb: False
+use_mol_props: False
+num_mol_props: 0
+mol_prop_names: []
+mol_feat_type: rdkit+graph
+
+===== 数据处理配置 =====
+mol_feat_type: rdkit+graph
+use_mol_props: False
+normalize_features: False
+normalize_mol_props: True
+
+===== 分割配置 =====
+split_type: random
+train_ratio: 0.8 | val_ratio: 0.1 | test_ratio: 0.1
+random_seed: 42
+
+===== 最佳超参数 =====
+inner_iters: 21
+pooling_iters: 19
+bandwidth: 109
+reg: 0.1
+feature_vector_top_k: 8
+feature_vector_threshold: None
+
+===== 交叉验证性能（训练集） =====
+mse: 0.5628
+mae: 0.5122
+rmse: 0.7481
+r2: 0.7963
+
+===== 最终模型性能 =====
+[验证集] MSE: 0.7910 | MAE: 0.5198 | RMSE: 0.8894 | R²: 0.7844
+[测试集] MSE: 0.2877 | MAE: 0.3671 | RMSE: 0.5364 | R²: 0.8737
+
+===== 测试集第一个分子原子重要性摘要 =====
+SMILES: CON(C)C(=O)Nc1ccc(Cl)cc1
+有效原子数: 25
+Top5 重要原子：
+  Top1: 原子9 → 重要性0.112801
+  Top2: 原子12 → 重要性0.112686
+  Top3: 原子8 → 重要性0.112593
+  Top4: 原子13 → 重要性0.112476
+  Top5: 原子7 → 重要性0.112063
+完整原子重要性文件：test_first_mol_atom_importance.txt

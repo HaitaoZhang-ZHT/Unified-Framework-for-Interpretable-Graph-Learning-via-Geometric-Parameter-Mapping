@@ -1,0 +1,7 @@
+The RFMs for Cora and Pubmed are both run in the same environment.
+
+MHWNN and the Cora dataset are run in the same environment.
+
+The HWNN and Res-HWNN for Pubmed are run in the same environment.
+
+Each has its corresponding requirements.

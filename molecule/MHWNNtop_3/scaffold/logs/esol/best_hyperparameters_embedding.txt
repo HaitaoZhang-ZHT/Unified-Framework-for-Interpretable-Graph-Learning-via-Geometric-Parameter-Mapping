@@ -1,0 +1,55 @@
+===== 嵌入数据信息 =====
+max_num_atoms: 55
+original_embed_dim: 256
+fused_embed_dim: 260
+num_samples: 1128
+use_mol_emb: False
+use_mol_props: False
+num_mol_props: 0
+mol_prop_names: []
+mol_feat_type: rdkit+graph
+
+===== 数据处理配置 =====
+mol_feat_type: rdkit+graph
+use_mol_props: False
+normalize_features: False
+normalize_mol_props: True
+
+===== 分割配置 =====
+split_type: scaffold
+split_balanced: False
+train_ratio: 0.8 | val_ratio: 0.1 | test_ratio: 0.1
+random_seed: 51
+
+===== 最佳超参数 =====
+inner_iters: 12
+pooling_iters: 19
+bandwidth: 55
+reg: 0.1
+feature_vector_top_k: 3
+feature_vector_threshold: None
+
+===== 交叉验证性能（训练集） =====
+mse: 0.5708
+mae: 0.5067
+rmse: 0.7513
+r2: 0.7867
+
+===== 最终模型性能 =====
+[验证集] MSE: 0.7055 | MAE: 0.5579 | RMSE: 0.8400 | R²: 0.7724
+[测试集] MSE: 0.6187 | MAE: 0.5146 | RMSE: 0.7866 | R²: 0.7372
+
+===== 测试集第一个分子原子重要性摘要 =====
+SMILES: CCCCCCC(=O)OCC
+有效原子数: 29
+Top5 重要原子：
+  Top1: 原子9 → 重要性0.112135
+  Top2: 原子3 → 重要性0.111481
+  Top3: 原子5 → 重要性0.111434
+  Top4: 原子4 → 重要性0.111120
+  Top5: 原子10 → 重要性0.111002
+完整原子重要性文件：test_first_mol_atom_importance.txt
+
+===== 模型衍生文件 =====
+加权对角矩阵 (Numpy格式): weighted_diag_matrix.npy
+加权对角矩阵 (PyTorch格式): weighted_diag_matrix.pt

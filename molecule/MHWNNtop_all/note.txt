@@ -1,0 +1,3 @@
+random Use "approx" during non-initialization; do not use it during initialization.
+scaffold Do not use "approx"
+In the initialization phase, weighted_diag_matrix.pt denotes vector initialization, while esol_rfm_embedding_model.npz denotes full matrix initialization.
