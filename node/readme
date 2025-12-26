@@ -1,0 +1,5 @@
+When the pre-trained M matrix from RFM is integrated into Res-HWNN, it will be initialized; if the M matrix is excluded, it will not participate in the initialization process.
+
+
+
+There are two versions of code for HWNN initialization: one is the initialization code, and the other is the non-initialization code. No removal operation is required.
